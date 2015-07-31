@@ -35,6 +35,10 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         checkConnection();
+
+        if(PushbotsPlugin.isAndroid()){
+            PushbotsPlugin.initializeAndroid("55bbebc81779595f408b4567", "1037061018259");
+        }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

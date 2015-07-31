@@ -1,0 +1,10 @@
+{
+    "com.pushbots.push": {
+        "source": {
+            "type": "registry",
+            "id": "com.pushbots.push"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}
