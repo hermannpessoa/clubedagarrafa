@@ -2,7 +2,7 @@
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>C.d.G</name>
     <description>
-        Ornanizando seu Coma Alcoolico!
+        Organizando seu Coma Alcoolico!
     </description>
     <author email="hermann.pessoa@gmail.com" href="http://justgo.com.br">
         JustGo!
