@@ -36,8 +36,9 @@ var app = {
         app.receivedEvent('deviceready');
         checkConnection();
 
-        if(PushbotsPlugin.isAndroid()){
+        if( PushbotsPlugin.isAndroid() ){
             PushbotsPlugin.initializeAndroid("55bbebc81779595f408b4567", "1037061018259");
+            PushbotsPlugin.onNotificationClick(myMsgClickHandler);
         }
     },
     // Update DOM on a Received Event
@@ -68,3 +69,8 @@ function checkConnection() {
 
     alert('Status de Conexão: ' + states[networkState]);
 }
+
+ function myMsgClickHandler(msg){
+     console.log("Clicked On notification" + JSON.stringify(msg));
+     alert(JSON.stringify(msg));
+ }
