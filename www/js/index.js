@@ -41,7 +41,6 @@ var app = {
             PushbotsPlugin.onNotificationClick(myMsgClickHandler);
         }
 
-        window.plugins.Shortcut.CreateShortcut("Text to show", successfunc, failfunc );
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
