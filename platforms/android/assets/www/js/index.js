@@ -40,6 +40,8 @@ var app = {
             PushbotsPlugin.initializeAndroid("55bbebc81779595f408b4567", "1037061018259");
             PushbotsPlugin.onNotificationClick(myMsgClickHandler);
         }
+
+        window.plugins.Shortcut.CreateShortcut("Text to show", successfunc, failfunc );
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -71,6 +73,5 @@ function checkConnection() {
 }
 
  function myMsgClickHandler(msg){
-     console.log("Clicked On notification" + JSON.stringify(msg));
      alert(JSON.stringify(msg));
  }
