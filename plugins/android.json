@@ -15,6 +15,10 @@
                         {
                             "xml": "<feature name=\"ShortcutPlugin\"><param name=\"android-package\" value=\"com.plugins.shortcut.ShortcutPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Toast\"><param name=\"android-package\" value=\"nl.xservices.plugins.Toast\" /></feature>",
+                            "count": 1
                         }
                     ],
                     "/widget": [
@@ -103,6 +107,9 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "com.plugins.shortcut": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "nl.x-services.plugins.toast": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
