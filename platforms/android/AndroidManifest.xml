@@ -32,4 +32,6 @@
     <permission android:name="com.phonegap.helloworld.permission.C2D_MESSAGE" android:protectionLevel="signature" />
     <uses-permission android:name="com.phonegap.helloworld.permission.C2D_MESSAGE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
 </manifest>

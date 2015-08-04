@@ -5,6 +5,9 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="ShortcutPlugin">
+        <param name="android-package" value="com.plugins.shortcut.ShortcutPlugin" />
+    </feature>
     <feature name="PushbotsPlugin">
         <param name="android-package" value="com.pushbots.plugin.PushbotsPlugin" />
     </feature>
@@ -51,6 +54,7 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="com.pushbots.push" source="plugins.cordova.io" version="1.2.3" />
+    <gap:plugin name="com.plugins.shortcut" />
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />

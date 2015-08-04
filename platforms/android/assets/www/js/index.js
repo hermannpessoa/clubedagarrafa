@@ -35,13 +35,12 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         checkConnection();
+        getShortcut();
 
         if( PushbotsPlugin.isAndroid() ){
             PushbotsPlugin.initializeAndroid("55bbebc81779595f408b4567", "1037061018259");
-            PushbotsPlugin.onNotificationClick(myMsgClickHandler);
         }
 
-        window.plugins.Shortcut.CreateShortcut("Text to show", successfunc, failfunc );
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -72,6 +71,9 @@ function checkConnection() {
     alert('Status de Conexão: ' + states[networkState]);
 }
 
- function myMsgClickHandler(msg){
-     alert(JSON.stringify(msg));
- }
+function getShortcut(){
+    if (!localStorage.getItem('shortcut')) {
+        window.plugins.Shortcut.CreateShortcut("Text to show", successfunc, failfunc);
+        localStorage.setItem('shortcut', true);
+    }
+}

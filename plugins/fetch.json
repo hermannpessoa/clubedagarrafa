@@ -22,5 +22,14 @@
         },
         "is_top_level": false,
         "variables": {}
+    },
+    "com.plugins.shortcut": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jorgecis/ShortcutPlugin.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

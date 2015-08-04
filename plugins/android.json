@@ -11,6 +11,10 @@
                         {
                             "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ShortcutPlugin\"><param name=\"android-package\" value=\"com.plugins.shortcut.ShortcutPlugin\" /></feature>",
+                            "count": 1
                         }
                     ],
                     "/widget": [
@@ -76,6 +80,16 @@
                             "xml": "<intent-filter><action android:name=\"com.phonegap.helloworld.MESSAGE\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter>",
                             "count": 1
                         }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\" />",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -86,6 +100,9 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "com.pushbots.push": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "com.plugins.shortcut": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },

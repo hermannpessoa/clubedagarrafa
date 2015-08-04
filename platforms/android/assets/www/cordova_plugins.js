@@ -11,6 +11,13 @@ module.exports = [
         "clobbers": [
             "PushbotsPlugin"
         ]
+    },
+    {
+        "file": "plugins/com.plugins.shortcut/www/ShortcutPlugin.js",
+        "id": "com.plugins.shortcut.ShortcutPlugin",
+        "clobbers": [
+            "ShortcutPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -18,6 +25,7 @@ module.exports.metadata =
 {
     "cordova-plugin-whitelist": "1.0.0",
     "com.pushbots.push": "1.2.4",
+    "com.plugins.shortcut": "0.1.1",
     "android.support.v4": "21.0.1"
 }
 // BOTTOM OF METADATA
