@@ -9,10 +9,10 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         checkConnection();
-        getShortcut();
 
         if( PushbotsPlugin.isAndroid() ){
             PushbotsPlugin.initializeAndroid("55bbebc81779595f408b4567", "1037061018259");
+            Pushbots.sharedInstance().debug(true);
         }
     },
     receivedEvent: function(id) {
@@ -42,17 +42,10 @@ function checkConnection() {
     states[Connection.NONE]     = 'Desconectado';
 
     ms = 'Status de Conexão: ' + states[networkState];
-    
+
     window.plugins.toast.showLongBottom(ms, function(a) {
         console.log('toast success: ' + a)
     }, function(b) {
         alert('toast error: ' + b)
     })
-}
-
-function getShortcut(){
-    if (!localStorage.getItem('shortcut')) {
-        window.plugins.Shortcut.CreateShortcut("Text to show", successfunc, failfunc);
-        localStorage.setItem('shortcut', true);
-    }
 }
