@@ -12,7 +12,16 @@ var app = {
 
         if( PushbotsPlugin.isAndroid() ){
             PushbotsPlugin.initializeAndroid("55bbebc81779595f408b4567", "1037061018259");
-            Pushbots.sharedInstance().debug(true);
+            //Set Alias
+            PushbotsPlugin.setAlias("hermann");
+            //Tag Device
+            PushbotsPlugin.tag("teste");
+            //Enable debug mode
+            PushbotsPlugin.debug(true);
+            //Get device token
+            PushbotsPlugin.getToken(function(token){
+                alert(token);
+            });
         }
     },
     receivedEvent: function(id) {
@@ -42,10 +51,10 @@ function checkConnection() {
     states[Connection.NONE]     = 'Desconectado';
 
     ms = 'Status de Conexão: ' + states[networkState];
-
-    window.plugins.toast.showLongBottom(ms, function(a) {
-        console.log('toast success: ' + a)
-    }, function(b) {
-        alert('toast error: ' + b)
-    })
+    alert(ms);
+    // window.plugins.toast.showLongBottom(ms, function(a) {
+    //     console.log('toast success: ' + a)
+    // }, function(b) {
+    //     alert('toast error: ' + b)
+    // })
 }
