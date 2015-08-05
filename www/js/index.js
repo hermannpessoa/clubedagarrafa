@@ -58,7 +58,7 @@ function toast(msg, delay){
     // parameters: TEXT, Time(Milisseconds);
     if($('.toast').size() < 1){
         $('body').append('<div class="toast" style="position: absolute;bottom: 20px;width: 100%;text-align: center;display: none;"><div class="container" style="background: rgba(0,0,0,0.3);text-align: center;position: relative;display: table;max-width: 70%;margin: 0 auto;padding: 0px 19px;border-radius: 50px;"><p style="color: #FFF;">-</p></div></div>');
-        if(typeof delay ==  "undefined"){ delay = "4000" };
+        if(typeof delay ==  "undefined"){ delay = "4000" }; // Default time
         $('.toast p').text(msg)
         $('.toast').fadeIn().delay(delay).fadeOut('slow', function(){$('.toast').remove();});
     }else{
